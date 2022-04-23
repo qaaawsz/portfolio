@@ -4,6 +4,7 @@ import SectionWrapper from '../../wrappers/SectionWrapper'
 import {urlFor, client} from '../../client'
 import {motion} from 'framer-motion'
 import './works.scss'
+import MotionWrapper from '../../wrappers/MotionWrapper'
 
 const Works = () => {
     const [activeFilter, setActiveFilter] = useState<string>('All')
@@ -42,7 +43,7 @@ const Works = () => {
     return (
         <div>
             <h2 className="head-text">
-                My creative <span>Portfolio</span>
+                My <span>Portfolio</span>
             </h2>
             <div className="app__work-filter">
                 {['UI/UX', 'Web App', 'React JS', 'All']
@@ -111,4 +112,4 @@ const Works = () => {
     )
 }
 
-export default SectionWrapper(Works, 'works')
+export default SectionWrapper(MotionWrapper(Works, 'app__works'), 'works')

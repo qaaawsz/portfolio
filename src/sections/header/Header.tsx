@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import {images} from '../../global/exports'
 import SectionWrapper from '../../wrappers/SectionWrapper'
 import './header.scss'
+import MotionWrapper from '../../wrappers/MotionWrapper'
 
 const Header = () => {
     const scaleVariants = {
@@ -69,4 +70,4 @@ const Header = () => {
     )
 }
 
-export default SectionWrapper(Header, 'home')
+export default SectionWrapper(MotionWrapper(Header, 'app__home'), 'home')

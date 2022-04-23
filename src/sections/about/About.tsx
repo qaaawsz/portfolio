@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import SectionWrapper from '../../wrappers/SectionWrapper'
 import {urlFor, client} from '../../client'
 import './about.scss'
+import MotionWrapper from '../../wrappers/MotionWrapper'
 
 const About = () => {
     const [abouts, setAbouts] = useState<any[]>([])
@@ -19,11 +20,7 @@ const About = () => {
     return (
         <div>
             <h2 className="head-text">
-                I Know That
-                <span>Good Design</span>
-                <br/>
-                means
-                <span>Good Business</span>
+                About <span>Me</span>
             </h2>
             <div className="app__profiles">
                 {
@@ -53,4 +50,4 @@ const About = () => {
     )
 }
 
-export default SectionWrapper(About, 'about')
+export default SectionWrapper(MotionWrapper(About, 'app__about'), 'about', 'app__whitebg')

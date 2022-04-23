@@ -3,7 +3,7 @@ import React from 'react'
 const Navdots: React.FC<{ active: string }> = ({active}) => {
     return (
         <div className="app__navigation">
-            {['home', 'about', 'skills', 'works', 'contacts']
+            {['home', 'about', 'works', 'skills', 'contacts']
                 .map((item) => (
                     <a
                         key={item}

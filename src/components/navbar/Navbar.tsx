@@ -6,7 +6,7 @@ import './navbar.scss'
 
 const navigation = (closeMenu: MouseEventHandler<HTMLLIElement>, isPC?: boolean) => (
     <ul className={isPC ? 'app__navbar-links' : ''}>
-        {['home', 'about', 'skills', 'works', 'contacts']
+        {['home', 'about', 'works', 'skills', 'contacts']
             .map((item) => (
                 <li
                     key={isPC ? `link-${item}` : item}
@@ -28,9 +28,6 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className="app__navbar">
-            <div className="app__navbar-logo">
-                <img src={images.logo} alt="logo"/>
-            </div>
             {navigation(closeMenu, true)}
             <div className="app__navbar-menu">
                 <HiMenuAlt4 onClick={openMenu}/>
