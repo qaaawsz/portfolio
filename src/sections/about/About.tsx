@@ -4,6 +4,7 @@ import SectionWrapper from '../../wrappers/SectionWrapper'
 import {urlFor, client} from '../../client'
 import './about.scss'
 import MotionWrapper from '../../wrappers/MotionWrapper'
+import {images} from '../../global/exports'
 
 const About = () => {
     const [abouts, setAbouts] = useState<any[]>([])
@@ -22,6 +23,29 @@ const About = () => {
             <h2 className="head-text">
                 About <span>Me</span>
             </h2>
+            <div style={{width: '80%', margin: 'auto'}}>
+                <p style={{fontSize: '1.1rem', marginTop: 20, textAlign: 'center'}} className="p-text">
+                    Hello. I am a <span className="bold-text">front end developer</span> with <span
+                    className="bold-text">2+</span> years of experience in building and maintaining complex web apps,
+                    specializing in SPA development utilizing React ecosystem. Proficient in <span
+                    className="bold-text">React</span>, <span className="bold-text">Redux</span>, <span
+                    className="bold-text">TypeScript</span>, <span className="bold-text">JavaScript</span>. Have an eye
+                    on <span className="bold-text">responsive</span> web design, and use a <span
+                    className="bold-text">mobile-first</span> approach during development. Used to work in a fast-paced,
+                    collaborative environment, well-versed in <span className="bold-text">Scrum</span> and <span
+                    className="bold-text">Agile</span>.
+                </p>
+                <p style={{fontSize: '1.1rem', marginTop: 20, textAlign: 'center'}} className="p-text">
+                    You can find my resume{' '}
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={images.resume}
+                    >
+                        here
+                    </a>
+                </p>
+            </div>
             <div className="app__profiles">
                 {
                     abouts.map((about) => (
